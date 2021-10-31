@@ -29,7 +29,7 @@ export default function SignUp() {
         <Flex minHeight="100vh" width="100vw" flexDirection="column">
             <Flex boxShadow="-2px 3px 5px 0px rgba(0,0,0,0.75)" justifyContent="space-between" alignItems="center" bg="#22262a" height="60px" width="100vw" p={3}>
                 <Heading fontSize="2xl">Sign Up</Heading>
-                <Button color="white" variant="ghost" size="md" onClick={(e) => history.push("")}>Create</Button>
+                <Button color="white" variant="ghost" size="md" onClick={(e) => history.push("/")}>Create</Button>
             </Flex>
             <Flex flexDirection="column" p={5}>
 

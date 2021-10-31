@@ -25,7 +25,7 @@ export default function Emergency() {
                     <Heading align="center" fontSize="4xl">S.O.S</Heading>
                     <Text position="absolute" bottom="0" p={3}>Emergency medical services</Text>
                 </Flex>
-                <Flex onClick={() => history.push("contacts")} borderRadius="20px" boxShadow="-2px 5px 5px 0px rgba(0,0,0,0.75);" height="25vh" bg="red" color="white" position="relative" justifyContent="center" alignItems="center">
+                <Flex onClick={() => history.push("/contacts")} borderRadius="20px" boxShadow="-2px 5px 5px 0px rgba(0,0,0,0.75);" height="25vh" bg="red" color="white" position="relative" justifyContent="center" alignItems="center">
                     <Heading fontSize="4xl" align="center" width="60%">Emergency Contacts</Heading>
                     <Text position="absolute" bottom="0" p={3}>Saved Emergency Numbers</Text>
                 </Flex>

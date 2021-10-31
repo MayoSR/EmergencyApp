@@ -15,7 +15,7 @@ export default function Navbar() {
 
     const selectTab = (tab, path) => {
         setSelectedIcon(tab)
-        history.push(path)
+        history.push("/" + path)
     }
 
     return (
