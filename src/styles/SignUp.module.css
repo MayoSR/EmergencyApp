@@ -1,0 +1,30 @@
+.darkIp {
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 100%;
+    color: grey !important;
+}
+
+.darkIp::placeholder {
+    color: grey !important;
+}
+
+.darkIp {}
+
+.pinContainer input {
+    height: 30px;
+    width: 30px;
+}
+
+.pinContainer input::placeholder {
+    opacity: 0;
+}
+
+.pinContainer p {
+    width: 30px;
+    text-align: center;
+}
+
+.addContactButton {
+    background: transparent !important;
+}
