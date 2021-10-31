@@ -12,6 +12,7 @@ import CoffeeDetails from './components/CoffeeDetails';
 import RestaurantDetails from './components/RestaurantDetails';
 import Emergency from './components/Emergency';
 import Contacts from './components/Contacts';
+import Search from './components/Search';
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
             <Navbar />
             <Route path="/contacts">
               <Contacts />
+            </Route>
+            <Route path="/search/:type">
+              <Search />
             </Route>
             <Navbar />
           </div>

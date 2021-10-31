@@ -10,118 +10,8 @@ import EmergencyButton from './microcomponents/EmergencyButton';
 import { useHistory } from 'react-router';
 export default function Home() {
 
-    const filterIpRef = useRef(null)
-    const history = useHistory()
-
-
-    const coffeShopsList = [
-        {
-            name: "Shoe Lane Coffee Company",
-            location: "Dublin, Ireland, Ailesbury Road,Sráid Anna Theas",
-            status: "Open",
-            closesAt: "8pm",
-            distance: "1.0km"
-        },
-        {
-            name: "Dukes Coffee Company",
-            location: "Dublin, Ireland, Ailesbury Road,Sráid Anna Theas",
-            status: "Open",
-            closesAt: "8pm",
-            distance: "1.1km"
-        },
-        {
-            name: "Soma Coffee",
-            location: "Dublin, Ireland, Dorset Street,Wellington Pl",
-            status: "Open",
-            closesAt: "2pm",
-            distance: "1.4km"
-        },
-        {
-            name: "The Heron Café",
-            location: "Dublin, Ireland, Ely Place,Drumcondra Rd, Bolton St",
-            status: "Open",
-            closesAt: "4pm",
-            distance: "1.5km"
-        },
-        {
-            name: "Budd's",
-            location: "Dublin, Ireland, Fitzwilliam Square,	Temple St N",
-            status: "Open",
-            closesAt: "10pm",
-            distance: "2km"
-        },
-    ]
-
-    const restaurantOrPubsList = [
-        {
-            name: "Lundy Foot’s Bar and Restaurant",
-            location: "Dublin, Ireland, Ailesbury Road,Sráid Anna Theas",
-            status: "Open",
-            closesAt: "11pm",
-            distance: "1.1km"
-        },
-        {
-            name: "The Crosskeys Inn ",
-            location: "Dublin, Ireland, Ailesbury Road,Sráid Anna Theas",
-            status: "Open",
-            closesAt: "11pm",
-            distance: "1.3km"
-        },
-        {
-            name: "Teach Beag, Clonakilty",
-            location: "Dublin, Ireland, Dorset Street,Wellington Pl",
-            status: "Open",
-            closesAt: "9pm",
-            distance: "1.4km"
-        },
-        {
-            name: "Tigh Ned, Galway",
-            location: "Dublin, Ireland, Ely Place,Drumcondra Rd, Bolton St",
-            status: "Open",
-            closesAt: "2am",
-            distance: "1.9km"
-        },
-        {
-            name: "O’Connell’s, Meath",
-            location: "Dublin, Ireland, Fitzwilliam Square,	Temple St N",
-            status: "Open",
-            closesAt: "12am",
-            distance: "2.1km"
-        },
-    ]
-
-    const shopMap = { 1: coffeShopsList, 2: restaurantOrPubsList }
-
-    const [lastList, setLastList] = useState(shopMap[parseInt(1)])
-
-    const filterList = (e) => {
-
-        setCurrentList(currentList.filter(shop => shop.name.toLowerCase().includes(filterIpRef.current.value.toLowerCase())))
-    }
-
-    const resetFilter = (e) => {
-        if (e.keyCode === 8) {
-            setCurrentList(lastList)
-        }
-    }
-
-    const [restaurantType, setRestaurantType] = useState(1)
-
-    const changeListValue = (value) => {
-        setLastList(shopMap[parseInt(value)])
-        setCurrentList(shopMap[parseInt(value)])
-        setRestaurantType(value)
-    }
-
-    const [currentList, setCurrentList] = useState(shopMap[1])
-
-    useEffect(() => {
-
-    }, [currentList])
-
-    const openRestaurantDetails = () => {
-
-    }
+    let history = useHistory()
+    let [tabToChangeTo, setTabToChangeTo] = useState(1)
 
     return (
         <Flex minHeight="100vh" width="100vw" flexDirection="column">
@@ -130,36 +20,9 @@ export default function Home() {
                 <Heading fontSize="2xl">AppName</Heading>
                 <EmergencyButton />
             </Flex>
-            <Box className={classes.searchBox} max-height="55vh" p={4} mt={4}>
-                <InputGroup mb={4} variant="filled" m={0}>
-                    <InputLeftElement
-                        pointerEvents="none"
-                        children={<Icon as={BsSearch} w={6} h={6} color="gray.400" />}
-                    />
-                    <Input placeholder="Search" size="md" ref={filterIpRef} onChange={(e) => filterList(e)} onKeyDown={resetFilter} />
-                </InputGroup>
-                <Box borderRadius="10px" borderTopLeftRadius="0" borderTopRightRadius="0" overflow="hidden" border="1px solid grey">
-                    {currentList.map(shop => {
-                        return <Flex bg="#22272a" borderBottom="1px solid grey" p={2} onClick={() => restaurantType === 1 ? history.push("shop/coffee") : history.push("shop/restaurant")}>
-                            <Icon w={6} h={6} as={GoLocation} mr={4} />
-                            <Box>
-                                <Heading fontSize="md">{shop.name}</Heading>
-                                <Text fontSize="xs">{shop.location}</Text>
-                                <Flex alignItems="center">
-                                    <Text fontSize="xs" color="green">{shop.status}</Text>
-                                    <Icon as={BsDot} />
-                                    <Text fontSize="xs">Closes at {shop.closesAt}</Text>
-                                    <Icon as={BsDot} />
-                                    <Text fontSize="xs">{shop.distance}</Text>
-                                </Flex>
-                            </Box>
-                        </Flex>
-                    })}
 
-                </Box>
-            </Box>
-            <Box className={classes.selectionBox} height="40vh">
-                <RadioGroup onChange={(value) => changeListValue(value)} defaultValue="1" name="shop-category" >
+            <Box className={classes.selectionBox}>
+                <RadioGroup onChange={(value) => setTabToChangeTo(value)} defaultValue="1" name="shop-category" >
                     <Flex flexDir="column" p={4}>
                         <Flex bg="#22272a" alignItems="center" justifyContent="space-between" p={3} mb={3} borderRadius="10px">
                             <Flex alignItems="center">
@@ -178,6 +41,12 @@ export default function Home() {
 
                     </Flex>
                 </RadioGroup>
+
+            </Box>
+            <Box px={4} >
+                <Button bg="#FFC107" color="#fff" onClick={() => tabToChangeTo === 1 ? history.push("/search/coffee") : history.push("/search/restaurant")} variant="filled" isFullWidth>
+                    Search
+                </Button>
             </Box>
 
         </Flex>
