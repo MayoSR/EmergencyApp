@@ -8,7 +8,8 @@ import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
-import Details from './components/Details';
+import CoffeeDetails from './components/CoffeeDetails';
+import RestaurantDetails from './components/RestaurantDetails';
 import Emergency from './components/Emergency';
 import Contacts from './components/Contacts';
 
@@ -30,8 +31,11 @@ function App() {
             <Route path="/emergency">
               <Emergency />
             </Route>
-            <Route path="/shop">
-              <Details />
+            <Route path="/shop/coffee">
+              <CoffeeDetails />
+            </Route>
+            <Route path="/shop/restaurant">
+              <RestaurantDetails />
             </Route>
             <Navbar />
             <Route path="/contacts">

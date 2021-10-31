@@ -9,7 +9,9 @@
     color: grey !important;
 }
 
-.darkIp {}
+.image-overlay {
+    position: relative;
+}
 
 .pinContainer input {
     height: 30px;

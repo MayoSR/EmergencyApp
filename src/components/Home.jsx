@@ -16,6 +16,13 @@ export default function Home() {
 
     const coffeShopsList = [
         {
+            name: "Shoe Lane Coffee Company",
+            location: "Dublin, Ireland, Ailesbury Road,Sráid Anna Theas",
+            status: "Open",
+            closesAt: "8pm",
+            distance: "1.0km"
+        },
+        {
             name: "Dukes Coffee Company",
             location: "Dublin, Ireland, Ailesbury Road,Sráid Anna Theas",
             status: "Open",
@@ -46,6 +53,13 @@ export default function Home() {
     ]
 
     const restaurantOrPubsList = [
+        {
+            name: "Lundy Foot’s Bar and Restaurant",
+            location: "Dublin, Ireland, Ailesbury Road,Sráid Anna Theas",
+            status: "Open",
+            closesAt: "11pm",
+            distance: "1.1km"
+        },
         {
             name: "The Crosskeys Inn ",
             location: "Dublin, Ireland, Ailesbury Road,Sráid Anna Theas",
@@ -91,9 +105,12 @@ export default function Home() {
         }
     }
 
+    const [restaurantType, setRestaurantType] = useState(1)
+
     const changeListValue = (value) => {
         setLastList(shopMap[parseInt(value)])
         setCurrentList(shopMap[parseInt(value)])
+        setRestaurantType(value)
     }
 
     const [currentList, setCurrentList] = useState(shopMap[1])
@@ -123,7 +140,7 @@ export default function Home() {
                 </InputGroup>
                 <Box borderRadius="10px" borderTopLeftRadius="0" borderTopRightRadius="0" overflow="hidden" border="1px solid grey">
                     {currentList.map(shop => {
-                        return <Flex bg="#22272a" borderBottom="1px solid grey" p={2} onClick={() => history.push("shop")}>
+                        return <Flex bg="#22272a" borderBottom="1px solid grey" p={2} onClick={() => restaurantType === 1 ? history.push("shop/coffee") : history.push("shop/restaurant")}>
                             <Icon w={6} h={6} as={GoLocation} mr={4} />
                             <Box>
                                 <Heading fontSize="md">{shop.name}</Heading>
