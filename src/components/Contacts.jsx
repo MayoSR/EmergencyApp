@@ -39,7 +39,7 @@ export default function Contacts() {
                                     <InputGroup>
                                         <InputLeftElement
                                             pointerEvents="none"
-                                            children={<Icon as={BsFillTelephoneFill} color="black" />}
+                                            children={<Icon as={BsFillTelephoneFill} color="white" />}
                                         />
                                         <Input isReadOnly value="+353 9932434271" />
                                         <InputRightElement children={<Icon as={AiFillCopy} color="green.500" />} />

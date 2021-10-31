@@ -73,7 +73,7 @@ export default function SignUp() {
                 Login
             </Button>
             <Box onClick={() => history.push("signup")}>
-                <Text fontSize="sm" align="center" mt={8}>Don't have an account?<Link ml={1} href="#" color="#FFC107">Sign up.</Link ></Text>
+                <Text fontSize="sm" align="center" mt={8}>Don't have an account?<Text ml={1} color="#FFC107">Sign up.</Text ></Text>
 
             </Box>
 
