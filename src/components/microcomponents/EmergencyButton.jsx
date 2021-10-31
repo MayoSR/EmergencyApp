@@ -7,7 +7,7 @@ export default function EmergencyButton() {
     const history = useHistory()
 
     return (
-        <Button variant="filled" bg="red" size="md" onClick={() => history.push("emergency")}>
+        <Button variant="filled" bg="red" size="md" onClick={() => history.push("/emergency")}>
             Emergency
         </Button>
     )

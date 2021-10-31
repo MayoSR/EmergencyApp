@@ -18,7 +18,6 @@ export default function Emergency() {
 
             <Flex boxShadow="-2px 3px 5px 0px rgba(0,0,0,0.75)" justifyContent="space-between" alignItems="center" bg="#22262a" height="60px" width="100vw" p={3}>
                 <Heading fontSize="2xl">AppName</Heading>
-                <EmergencyButton />
             </Flex>
             <Flex flexDirection="column" p={4}>
 
