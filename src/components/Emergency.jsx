@@ -17,7 +17,7 @@ export default function Emergency() {
         <Flex minHeight="100vh" width="100vw" flexDirection="column" >
 
             <Flex boxShadow="-2px 3px 5px 0px rgba(0,0,0,0.75)" justifyContent="space-between" alignItems="center" bg="#22262a" height="60px" width="100vw" p={3}>
-                <Heading fontSize="2xl">Gan Eagla</Heading>
+                <Heading fontSize="2xl">gan eagla</Heading>
             </Flex>
             <Flex flexDirection="column" p={4}>
 

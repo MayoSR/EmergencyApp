@@ -22,7 +22,7 @@ export default function SignUp() {
         <Flex minHeight="100vh" width="100vw" flexDirection="column" alignItems="center" p={4}>
 
             <Center width="100vw" overflow="hidden" mb={"40px"}>
-                <img src="/logoname.png" style={{ width: "70vw" }} />
+                <img src="/logo2.png" style={{ width: "70vw" }} />
             </Center >
 
             <InputGroup mb={4}>
