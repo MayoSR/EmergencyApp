@@ -33,7 +33,7 @@ export default function SignUp() {
             </Flex>
             <Flex flexDirection="column" p={5}>
 
-                <Heading color="#FFC107" fontSize="3xl" mb={4}>Personal Details</Heading>
+                <Heading color="#589254" fontSize="3xl" mb={4}>Personal Details</Heading>
                 <Flex mb={3}>
                     <Flex flexDir="column" alignItems="center" mr={2}>
                         <Heading fontSize="md" width="100%" mb={1}>First Name</Heading>
@@ -103,7 +103,7 @@ export default function SignUp() {
                     </InputGroup>
                 </Flex>
                 <Divider my={3} />
-                <Heading fontSize="3xl" color="#FFC107" mb={4}>Emergency Details</Heading>
+                <Heading fontSize="3xl" color="#589254" mb={4}>Emergency Details</Heading>
                 {contactArr.map(contact => {
                     return (<Box>
                         <Heading fontSize="2xl" mb={2}>Contact {contact}:</Heading>

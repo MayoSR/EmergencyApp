@@ -62,7 +62,7 @@ export default function CoffeeDetails() {
                                 <Flex justifyContent="space-between" alignItems="center" width="100%">
 
                                     <Flex alignItems="center">
-                                        <Icon color="#FFC107" w={6} h={6} as={data.icon} />
+                                        <Icon color="#589254" w={6} h={6} as={data.icon} />
 
                                         <Heading ml={3} fontSize="xl" textAlign="justify">{data.desc}</Heading>
 

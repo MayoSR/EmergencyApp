@@ -26,17 +26,17 @@ export default function Home() {
                     <Flex flexDir="column" p={4}>
                         <Flex bg="#22272a" alignItems="center" justifyContent="space-between" p={3} mb={3} borderRadius="10px">
                             <Flex alignItems="center">
-                                <Icon color="#FFC107" w={9} h={9} as={GiCoffeePot} />
+                                <Icon color="#589254" w={9} h={9} as={GiCoffeePot} />
                                 <Heading ml={3} fontSize="xl"> Coffee Shops</Heading>
                             </Flex>
-                            <Radio size="lg" value="1" colorScheme="yellow" />
+                            <Radio size="lg" value="1" colorScheme="green" />
                         </Flex>
                         <Flex bg="#22272a" alignItems="center" justifyContent="space-between" p={3} mb={3} borderRadius="10px">
                             <Flex alignItems="center">
-                                <Icon color="#FFC107" w={9} h={9} as={GiWineBottle} />
+                                <Icon color="#589254" w={9} h={9} as={GiWineBottle} />
                                 <Heading ml={3} fontSize="xl"> Restaurants and Pubs</Heading>
                             </Flex>
-                            <Radio size="lg" value="2" colorScheme="yellow" />
+                            <Radio size="lg" value="2" colorScheme="green" />
                         </Flex>
 
                     </Flex>
@@ -44,7 +44,7 @@ export default function Home() {
 
             </Box>
             <Box px={4} >
-                <Button bg="#FFC107" color="#fff" onClick={() => tabToChangeTo === 1 ? history.push("/search/coffee") : history.push("/search/restaurant")} variant="filled" isFullWidth>
+                <Button bg="#589254" color="#fff" onClick={() => tabToChangeTo === 1 ? history.push("/search/coffee") : history.push("/search/restaurant")} variant="filled" isFullWidth>
                     Search
                 </Button>
             </Box>

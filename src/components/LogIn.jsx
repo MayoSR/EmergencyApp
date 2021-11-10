@@ -40,11 +40,11 @@ export default function SignUp() {
                 <Input ref={passwordIpRef} type={passwordVisibility ? "text" : "password"} className={classes.darkIp} placeholder="Password" size="lg" />
                 <InputRightElement children={<Icon as={passwordVisibility ? AiOutlineEyeInvisible : AiOutlineEye} mt={2} w={6} h={6} color="gray.300" />} onClick={() => modifyPasswordVisibility()} />
             </InputGroup>
-            <Button bg="#FFC107" isFullWidth border="none" variant="outline" onClick={() => history.push("/home")} >
+            <Button bg="#589254" isFullWidth border="none" variant="outline" onClick={() => history.push("/home")} >
                 Login
             </Button>
             <Box onClick={() => history.push("/signup")}>
-                <Text fontSize="sm" align="center" mt={8}>Don't have an account?<Text ml={1} color="#FFC107">Sign up.</Text ></Text>
+                <Text fontSize="sm" align="center" mt={8}>Don't have an account?<Text ml={1} color="#589254">Sign up.</Text ></Text>
 
             </Box>
 
