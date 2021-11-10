@@ -19,41 +19,12 @@ export default function SignUp() {
 
 
     return (
-        <Flex minHeight="100vh" width="100vw" flexDirection="column" justifyContent="center" alignItems="center" p={4}>
-            <Box>
-                <Box position="absolute" transform="rotate(-20deg)" top="40px" left="40px">
-                    <Icon color="rgba(69, 77, 84,0.3)" as={GiCoffeePot} w={24} h={24} />
-                </Box>
-                <Box position="absolute" transform="rotate(40deg)" top="80px" right="20px">
-                    <Icon color="rgba(69, 77, 84,0.3)" as={GiHamburger} w={24} h={24} />
-                </Box>
-                <Box position="absolute" transform="rotate(30deg)" top="120px" left="100px">
-                    <Icon color="rgba(69, 77, 84,0.3)" as={GiPizzaSlice} w={32} h={32} />
-                </Box>
-                <Box position="absolute" transform="rotate(-10deg)" bottom="140px" left="40px">
-                    <Icon color="rgba(69, 77, 84,0.3)" as={GiFastNoodles} w={24} h={24} />
-                </Box>
-                <Box position="absolute" transform="rotate(30deg)" bottom="40px" right="200px">
-                    <Icon color="rgba(69, 77, 84,0.3)" as={GiSandwich} w={24} h={24} />
-                </Box>
-                <Box position="absolute" transform="rotate(-40deg)" top="210px" left="-10px">
-                    <Icon color="rgba(69, 77, 84,0.3)" as={GiSandwich} w={24} h={24} />
-                </Box>
-                <Box position="absolute" transform="rotate(-30deg)" top="200px" right="-10px">
-                    <Icon color="rgba(69, 77, 84,0.3)" as={GiFastNoodles} w={24} h={24} />
-                </Box>
-                <Box position="absolute" transform="rotate(-20deg)" bottom="150px" left="200px">
-                    <Icon color="rgba(69, 77, 84,0.3)" as={GiCoffeePot} w={24} h={24} />
-                </Box>
-                <Box position="absolute" transform="rotate(40deg)" bottom="80px" right="-20px">
-                    <Icon color="rgba(69, 77, 84,0.3)" as={GiHamburger} w={24} h={24} />
-                </Box>
-                <Box position="absolute" transform="rotate(30deg)" bottom="200px" left="-50px">
-                    <Icon color="rgba(69, 77, 84,0.3)" as={GiPizzaSlice} w={32} h={32} />
-                </Box>
+        <Flex minHeight="100vh" width="100vw" flexDirection="column" alignItems="center" p={4}>
 
-            </Box>
-            <Heading align="center" fontSize="5xl" mb={10}>Login</Heading>
+            <Center width="100vw" overflow="hidden" mb={"40px"}>
+                <img src="/logoname.png" style={{ width: "70vw" }} />
+            </Center >
+
             <InputGroup mb={4}>
                 <InputLeftElement
                     pointerEvents="none"
@@ -77,6 +48,6 @@ export default function SignUp() {
 
             </Box>
 
-        </Flex>
+        </Flex >
     )
 }
